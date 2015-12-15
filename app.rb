@@ -1,13 +1,23 @@
 require 'sinatra/base'
+require './lib/link'
 
 class BookmarkManager < Sinatra::Base
   get '/' do
-    'Hello BookmarkManager!'
+    redirect '/links/new'
   end
 
   get '/links' do
     @links = Link.all
     erb :'links'
+  end
+
+  get '/links/new' do
+    erb :index
+  end
+
+  post '/links' do
+    Link.create(:title => params[:title], :url => params[:url])
+    redirect '/links'
   end
 
   # start the server if ruby file executed directly
