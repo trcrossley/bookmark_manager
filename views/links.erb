@@ -6,8 +6,14 @@
 </head>
 
 <body>
+  <h1>Links</h1>
   <ul id='links'>
-    <li><%= Link.get(1)[:title] %></li>
+    <% @links.each do |link| %>
+    <li>
+      Title:  <%= link.title %>
+      URL:    <%= link.url %>
+    </li>
+    <% end %>
   </ul>
 </body>
 
