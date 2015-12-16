@@ -7,7 +7,10 @@
 
 <body>
   <h1>Links</h1>
-  <ul id='links'>
+  <form action="/links/new">
+    <input type="submit" value="Add another link">
+  </form>
+  <ul id="links">
     <% @links.each do |link| %>
     <li>
       Title:  <%= link.title %>

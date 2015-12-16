@@ -5,6 +5,7 @@
 feature 'Creating links' do
   scenario 'I can submit links' do
     visit '/'
+    click_button('Add another link')
     fill_in('title', with: 'Makers Academy')
     fill_in('url', with: 'http://www.makersacademy.com')
     click_button('Hey Presto!')
