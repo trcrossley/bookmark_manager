@@ -8,6 +8,7 @@ feature 'Creating links' do
     click_button('Add another link')
     fill_in('title', with: 'Makers Academy')
     fill_in('url', with: 'http://www.makersacademy.com')
+    fill_in('tags', with: 'Bootcamp')
     click_button('Hey Presto!')
     within 'ul#links' do
       expect(page).to have_content('http://www.makersacademy.com')
