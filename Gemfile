@@ -8,6 +8,8 @@ gem 'selenium-webdriver'
 gem 'sinatra'
 gem 'database_cleaner'
 gem 'rake'
+gem 'bcrypt'
+gem 'byebug'
 
 group :test do
   gem 'rspec'

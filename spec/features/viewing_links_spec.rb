@@ -30,6 +30,4 @@ feature 'Viewing links' do
       expect(page).to have_content('Bubble Bobble')
     end
   end
-
-
 end

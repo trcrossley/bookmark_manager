@@ -1,26 +1,25 @@
-<!DOCTYPE html>
+
 <html>
 
-<head>
-  <title>Book Mark Manager</title>
-</head>
+  <head>
+    <title>Bookmark Manager</title>
+  </head>
 
-<body>
-  <h1>Links</h1>
+  <body>
+    <h1>Links</h1>
 
-  <form action="/links/new">
-    <input type="submit" value="Add another link">
-  </form>
-  <ul id="links">
-    <% @links.each do |link| %>
-    <li>
-      Title:  <%= link.title %>
-      URL:    <%= link.url %>
-    </li>
-    <% end %>
-  </ul>
-</body>
-
-
+    <form action="/links/new">
+      <input type="submit" value="Add another link">
+    </form>
+    
+    <ul id="links">
+      <% @links.each do |link| %>
+      <li>
+        Title:  <%= link.title %>
+        URL:    <%= link.url %>
+      </li>
+      <% end %>
+    </ul>
+  </body>
 
 </html>
